@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+
+      #demoText {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      #changeButton {
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      #imageContainer {
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <p id="demoText">Click the button to change this text.</p>
+      <button id="changeButton" onclick="changeText()">Change Text</button>
+    </div>
+
+    <div id="imageContainer" />
+
+    <script>
+      function changeText() {
+        const demoText = document.getElementById("demoText");
+        demoText.innerHTML = "Text has been changed!";
+        // const elementByQuerySelector = document.querySelector("#someId"); // ID
+        // const elementByClass = document.querySelector(".someClass"); // class
+        // const elementByTag = document.querySelector("div"); // tag
+      }
+      function renderImage() {
+        const imageContainer = document.getElementById("imageContainer");
+
+        const image = document.createElement("img");
+        const text = document.createElement("p");
+        image.src = "https://placekitten.com/200/300";
+        text.innerHTML = "Gambar lucu";
+
+        imageContainer.appendChild(image);
+        imageContainer.appendChild(text);
+      }
+      renderImage();
+    </script>
+  </body>
+</html>

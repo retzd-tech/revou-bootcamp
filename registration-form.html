@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+  <title>RevoU - Registration Form</title>
+</head>
+<body>
+  <form id="registrationForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label>Gender:</label>
+    <label for="male">Male</label>
+    <input type="radio" id="male" name="gender" value="male" required>
+    <label for="female">Female</label>
+    <input type="radio" id="female" name="gender" value="female" required>
+    <label for="other">Other</label>
+    <input type="radio" id="other" name="gender" value="other" required>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" rows="4" required></textarea>
+
+    <label for="height">Height (cm):</label>
+    <input type="range" id="height" name="height" min="100" max="250" step="1" value="170">
+
+    <label for="profilePic">Profile Picture:</label>
+    <input type="file" id="profilePic" name="profilePic" accept="image/*">
+
+    <label for="skills">Skills:</label>
+    <select id="skills" name="skills" multiple>
+      <option value="html">HTML</option>
+      <option value="css">CSS</option>
+      <option value="js">JavaScript</option>
+      <option value="python">Python</option>
+    </select>
+
+    <label>Languages:</label>
+    <label for="english">English</label>
+    <input type="checkbox" id="english" name="languages" value="english">
+    <label for="spanish">Spanish</label>
+    <input type="checkbox" id="spanish" name="languages" value="spanish">
+    <label for="french">French</label>
+    <input type="checkbox" id="french" name="languages" value="french">
+
+    <label for="favoriteColor">Favorite Color:</label>
+    <input type="color" id="favoriteColor" name="favoriteColor">
+
+    <label for="week">Preferred Week:</label>
+    <input type="week" id="week" name="week">
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="10">
+
+    <label for="website">Website:</label>
+    <input type="url" id="website" name="website">
+
+    <label for="appointmentTime">Preferred Appointment Time:</label>
+    <input type="time" id="appointmentTime" name="appointmentTime">
+
+    <label for="searchQuery">Search:</label>
+    <input type="search" id="searchQuery" name="searchQuery">
+
+    <label for="eventMonth">Preferred Event Month:</label>
+    <input type="month" id="eventMonth" name="eventMonth">
+
+    <label for="dateTime">Preferred Date and Time:</label>
+    <input type="datetime-local" id="dateTime" name="dateTime">
+
+    <label for="colorPreference">Color Preference:</label>
+    <input type="color" id="colorPreference" name="colorPreference">
+
+    <label for="quantitySlider">Quantity Slider:</label>
+    <input type="range" id="quantitySlider" name="quantitySlider" min="1" max="100" step="1">
+
+    <label for="fileUpload">File Upload:</label>
+    <input type="file" id="fileUpload" name="fileUpload" accept=".pdf, .doc, .docx">
+
+    <button type="button" onclick="submitForm()">Submit</button>
+  </form>
+
+  <script>
+    function submitForm() {
+      // Get form data
+      var firstName = document.getElementById('firstName').value;
+      var lastName = document.getElementById('lastName').value;
+      var email = document.getElementById('email').value;
+      var phone = document.getElementById('phone').value;
+      var password = document.getElementById('password').value;
+      var gender = document.querySelector('input[name="gender"]:checked').value;
+      var dob = document.getElementById('dob').value;
+      var address = document.getElementById('address').value;
+      var height = document.getElementById('height').value;
+      var profilePic = document.getElementById('profilePic').value; // Note: This won't actually get the file; it's just for demonstration.
+      var skills = Array.from(document.getElementById('skills').options)
+        .filter(option => option.selected)
+        .map(option => option.value);
+      var languages = Array.from(document.querySelectorAll('input[name="languages"]:checked'))
+        .map(checkbox => checkbox.value);
+      var favoriteColor = document.getElementById('favoriteColor').value;
+      var week = document.getElementById('week').value;
+      var quantity = document.getElementById('quantity').value;
+      var website = document.getElementById('website').value;
+      var appointmentTime = document.getElementById('appointmentTime').value;
+      var searchQuery = document.getElementById('searchQuery').value;
+      var eventMonth = document.getElementById('eventMonth').value;
+      var dateTime = document.getElementById('dateTime').value;
+      var colorPreference = document.getElementById('colorPreference').value;
+      var quantitySlider = document.getElementById('quantitySlider').value;
+      var fileUpload = document.getElementById('fileUpload').value; // Note: This won't actually get the file; it's just for demonstration.
+      
+      // Display alert with submitted data
+      var message = `First Name: ${firstName}\nLast Name: ${lastName}\nEmail: ${email}\nPhone: ${phone}\nPassword: ${password}\nGender: ${gender}\nDate of Birth: ${dob}\nAddress: ${address}\nHeight: ${height} cm\nProfile Picture: ${profilePic}\nSkills: ${skills.join(', ')}\nLanguages: ${languages.join(', ')}\nFavorite Color: ${favoriteColor}\nPreferred Week: ${week}\nQuantity: ${quantity}\nWebsite: ${website}\nPreferred Appointment Time: ${appointmentTime}\nSearch: ${searchQuery}\nPreferred Event Month: ${eventMonth}\nDate and Time: ${dateTime}\nColor Preference: ${colorPreference}\nQuantity Slider: ${quantitySlider}\nFile Upload: ${fileUpload}`;
+      alert(message);
+    }
+  </script>
+
+</body>
+</html>

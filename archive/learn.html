@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Learning HTML, CSS and Javascript</title>
+    <link rel="stylesheets" href="index.css"/>
+    
+    <style>
+      /* General styles for the entire page */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      /* Header styles */
+      header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em;
+      }
+
+      /* Navigation styles */
+      nav {
+        background-color: #555;
+        color: #fff;
+        padding: 0.5em;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5em;
+        margin: 0 1em;
+      }
+
+      /* Main section styles */
+      section {
+        padding: 2em;
+      }
+
+      /* Article and aside styles */
+      article {
+        float: left;
+        width: 60%;
+        margin-right: 2%;
+      }
+
+      aside {
+        float: left;
+        width: 38%;
+      }
+
+      /* Main content styles */
+      main {
+        clear: both;
+        padding: 2em;
+      }
+
+      /* Footer styles */
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+
+      /* Custom class styles */
+      .css-based-on-classname {
+        background-color: #ffcc00;
+        color: #333;
+        padding: 1em;
+        border: 1px solid #e6e6e6;
+        margin-bottom: 1em;
+      }
+
+      #css-based-on-id {
+        /* CSS styles for the element with ID "myElement" */
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      /* Hover effect styles */
+      a:hover {
+        color: #ffcc00;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <h1>Main Heading</h1>
+      <p>Subtitle or Tagline</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <article class="css-based-on-classname">
+        <h2>This is my element with class name "css-based-on-classname"</h2>
+        <p>Article content goes here.</p>
+        <a href="#">Read more</a>
+      </article>
+
+      <div id="css-based-on-id">
+        <h1>This is my element with ID "css-based-on-id"</h1>
+        <p>This element has some custom styles applied using CSS.</p>
+      </div>
+
+      <aside>
+        <h3>Aside Section</h3>
+        <p>Additional content or sidebar goes here.</p>
+      </aside>
+    </section>
+
+    <main>
+      <h2>Main Content Area</h2>
+      <p>This is the main content of the page.</p>
+
+      <img
+        src="https://placekitten.com/200/300"
+        alt="Description of the image"
+      />
+
+      <ul>
+        <li>Unordered List Item 1</li>
+        <li>Unordered List Item 2</li>
+        <li>Unordered List Item 3</li>
+      </ul>
+
+      <ol>
+        <li>Ordered List Item 1</li>
+        <li>Ordered List Item 2</li>
+        <li>Ordered List Item 3</li>
+      </ol>
+
+      <dl>
+        <dt>Definition Term 1</dt>
+        <dd>Definition Description 1</dd>
+        <dt>Definition Term 2</dt>
+        <dd>Definition Description 2</dd>
+      </dl>
+
+      <blockquote>
+        <p>
+          This is a blockquote. It can be used to emphasize or quote a section
+          of text.
+        </p>
+      </blockquote>
+
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+          </tr>
+          <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+        <input type="submit" value="Submit" />
+      </form>
+    </main>
+
+    <script>
+        var suatuKata = "Lagi belajar HTML, CSS dan Javascript";
+        console.log(suatuKata);
+    </script>
+
+    <!-- Event listener -->
+    <!-- <p id="demoText">Click the button to change this text.</p>
+        <button id="changeButton" onclick="changeText()">Change Text</button>
+      </div>
+  
+      <div id="imageContainer" /> -->
+
+    <!-- <script>
+        function changeText() {
+          const demoText = document.getElementById("demoText");
+          demoText.innerHTML = "Text has been changed!";
+          // const elementByQuerySelector = document.querySelector("#someId"); // ID
+          // const elementByClass = document.querySelector(".someClass"); // class
+          // const elementByTag = document.querySelector("div"); // tag
+        }
+        function renderImage() {
+          const imageContainer = document.getElementById("imageContainer");
+  
+          const image = document.createElement("img");
+          const text = document.createElement("p");
+          image.src = "https://placekitten.com/200/300";
+          text.innerHTML = "Gambar lucu";
+  
+          imageContainer.appendChild(image);
+          imageContainer.appendChild(text);
+        }
+        renderImage();
+      </script> -->
+  </body>
+</html>
