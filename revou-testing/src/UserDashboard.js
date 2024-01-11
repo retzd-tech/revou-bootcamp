@@ -12,10 +12,10 @@ const UserDashboard = () => {
 
 const renderDashboard = (user) => {
   return (
-    <>
+    <div data-testid="user-dashboard-component">
       <Header />
       <BankAccounts user={user} />
-    </>
+    </div>
   );
 };
 

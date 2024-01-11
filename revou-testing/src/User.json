@@ -1,0 +1,4 @@
+{
+  "name": "user",
+  "accounts": [{ "id": 1, "name": "Savings", "balance": 1000 }]
+}

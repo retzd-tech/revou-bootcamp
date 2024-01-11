@@ -4,13 +4,9 @@ import { useUser } from "./UserContext";
 const Header = () => {
   const { user, logout } = useUser();
 
-  const handleLogout = () => {
-    logout();
-  };
-
   return (
     <>
-      <button className="logout-button" onClick={handleLogout}>
+      <button className="logout-button" onClick={logout}>
         Logout
       </button>
       <div className="header">

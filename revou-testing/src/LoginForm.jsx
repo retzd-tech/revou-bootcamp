@@ -1,5 +1,6 @@
 // src/LoginForm.js
 import React, { useState } from 'react';
+
 import { useUser } from './UserContext';
 import './LoginForm.css';
 
@@ -25,7 +26,7 @@ const LoginForm = () => {
   return (
     <div className="login-container">
       <div className="login-box">
-        <h2>Login</h2>
+        <h2>Sign In</h2>
         <form className="login-form">
           <label>
             Username:
