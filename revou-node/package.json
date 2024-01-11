@@ -1,0 +1,19 @@
+{
+  "name": "revou-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "echo \"Deploy Go!!!\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase-tools": "^13.0.2",
+    "react-hook-form": "^7.49.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0"
+  }
+}

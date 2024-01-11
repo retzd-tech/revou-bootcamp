@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Example</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      grid-template-rows: repeat(4, 100px);
+    }
+
+    .one {
+      grid-column: 1 / 3;
+      grid-row: 1;
+    }
+
+    .two {
+      grid-column: 2 / 4;
+      grid-row: 1 / 3;
+    }
+
+    .three {
+      grid-column: 1;
+      grid-row: 2 / 3;
+    }
+
+    .four {
+      grid-column: 3;
+      grid-row: 3;
+    }
+
+    .five {
+      grid-column: 2;
+      grid-row: 4;
+    }
+
+    .six {
+      grid-column: 3;
+      grid-row: 4;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="one">1</div>
+    <div class="two">2</div>
+    <div class="three">3</div>
+    <div class="four">4</div>
+    <div class="five">5</div>
+    <div class="six">6</div>
+  </div>
+
+</body>
+</html>
