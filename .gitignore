@@ -5,6 +5,7 @@ revou-testing/node_modules
 revou-react/node_modules
 revou-node/node_modules
 revou-components/node_modules
+revou-router/node_modules
 /.pnp
 .pnp.js
 
