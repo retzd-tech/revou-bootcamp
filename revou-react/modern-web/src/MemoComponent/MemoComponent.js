@@ -12,10 +12,10 @@ const MemoComponent = () => {
   return (
     <div>
       {/* Without React.memo */}
-      <HeavyDataComponent data={withoutMemoData} />
+      {/* <HeavyDataComponent data={withoutMemoData} /> */}
 
       {/* With React.memo */}
-      <MemoizedHeavyDataComponent data={withMemoData} />
+      {/* <MemoizedHeavyDataComponent data={withMemoData} /> */}
     </div>
   );
 };

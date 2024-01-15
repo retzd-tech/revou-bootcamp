@@ -1,14 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-revou-testing/node_modules
-revou-react/node_modules
-revou-node/node_modules
-revou-components/node_modules
-revou-router/node_modules
-revou-simple-app/node_modules
-*/node_modules
-**/node_modules
+/node_modules
 /.pnp
 .pnp.js
 

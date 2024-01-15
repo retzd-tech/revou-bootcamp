@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
+import Internalization from "./Internalization/App";
 import KeyList from "./KeyList/KeyList";
 import DirectDOM from "./DirectDOM/DirectDOM";
 import LazyLoading from "./LazyLoading/LazyLoading";
@@ -19,25 +20,24 @@ const App = () => {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{title}</p>
-        <button
-          onClick={() => {
-            setChapterCount(chapterCount + 1);
-            const newTitle = `Learn React Chapter ${chapterCount}`;
-            setTitle(newTitle);
-          }}
-        >
-          Click to update
-        </button>
-      </header>
+      {/* <Internalization /> */}
+      
+      <p>{title}</p>
+      <button
+        onClick={() => {
+          setChapterCount(chapterCount + 1);
+          const newTitle = `Learn React Chapter ${chapterCount}`;
+          setTitle(newTitle);
+        }}
+      >
+        Click to update
+      </button>
 
-      <FibonacciComponent/>
-      <MemoComponent />
-      <KeyList/>
-      <DirectDOM/>
-      <LazyLoading/>
+      {/* <FibonacciComponent/> */}
+      {/* <MemoComponent /> */}
+      {/* <KeyList/> */}
+      {/* <DirectDOM/> */}
+      {/* <LazyLoading/> */}
     </div>
   );
 };
