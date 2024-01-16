@@ -20,7 +20,7 @@ const App = () => {
 
   return (
     <div className="App">
-      {/* <Internalization /> */}
+      <Internalization />
       
       <p>{title}</p>
       <button

@@ -5,8 +5,8 @@ import './i18n';
 function App() {
   const { t, i18n } = useTranslation();
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
   };
 
   return (
